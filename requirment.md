@@ -6,23 +6,16 @@ Description:
 Build a website for school management with following requirements:
 1. Home:
  
-2. Mandatory Public Disclosure:
  
-3. About Us:
+2. About Us: Add dummy content in it will add later ( if you have the content please add into it)
  
-4. Curriculum:
+3. Curriculum: pre school , nursery, junior KG and Senior KG
  
-5. Awards & Certifications:
+4. Awards & Certifications:
  
-6. Gallery:
+5. Gallery:
 
-
-
-Features:
-1. User Login (Parents Login):
-
-
-2. Admin Login (Faculty Login):
+6. Public Holidays
 
 
 Tech stack:
