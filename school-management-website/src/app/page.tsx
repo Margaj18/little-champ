@@ -1,155 +1,75 @@
-import styled from 'styled-components';
-import { Container } from '@/components/ui/Container';
-import { Button } from '@/components/ui/Button';
-import { Card } from '@/components/ui/Card';
-
-const HeroSection = styled.section`
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary[50]}, ${({ theme }) => theme.colors.accent[50]});
-  padding: ${({ theme }) => theme.spacing[20]} 0;
-  text-align: center;
-`;
-
-const HeroContent = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-`;
-
-const HeroTitle = styled.h1`
-  font-size: ${({ theme }) => theme.fontSizes['5xl']};
-  font-weight: 700;
-  color: ${({ theme }) => theme.colors.secondary[900]};
-  margin-bottom: ${({ theme }) => theme.spacing[6]};
-  line-height: 1.1;
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.md}) {
-    font-size: ${({ theme }) => theme.fontSizes['4xl']};
-  }
-`;
-
-const HeroSubtitle = styled.p`
-  font-size: ${({ theme }) => theme.fontSizes.xl};
-  color: ${({ theme }) => theme.colors.secondary[600]};
-  margin-bottom: ${({ theme }) => theme.spacing[8]};
-  line-height: 1.6;
-`;
-
-const HeroButtons = styled.div`
-  display: flex;
-  gap: ${({ theme }) => theme.spacing[4]};
-  justify-content: center;
-  flex-wrap: wrap;
-`;
-
-const FeaturesSection = styled.section`
-  padding: ${({ theme }) => theme.spacing[20]} 0;
-  background-color: ${({ theme }) => theme.colors.white};
-`;
-
-const SectionTitle = styled.h2`
-  text-align: center;
-  font-size: ${({ theme }) => theme.fontSizes['4xl']};
-  font-weight: 600;
-  color: ${({ theme }) => theme.colors.secondary[900]};
-  margin-bottom: ${({ theme }) => theme.spacing[12]};
-`;
-
-const FeaturesGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: ${({ theme }) => theme.spacing[8]};
-  margin-top: ${({ theme }) => theme.spacing[12]};
-`;
-
-const FeatureCard = styled(Card)`
-  text-align: center;
-  padding: ${({ theme }) => theme.spacing[8]};
-`;
-
-const FeatureIcon = styled.div`
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary[500]}, ${({ theme }) => theme.colors.accent[500]});
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto ${({ theme }) => theme.spacing[6]};
-  font-size: ${({ theme }) => theme.fontSizes['2xl']};
-  color: white;
-`;
-
-const FeatureTitle = styled.h3`
-  font-size: ${({ theme }) => theme.fontSizes.xl};
-  font-weight: 600;
-  color: ${({ theme }) => theme.colors.secondary[900]};
-  margin-bottom: ${({ theme }) => theme.spacing[4]};
-`;
-
-const FeatureDescription = styled.p`
-  color: ${({ theme }) => theme.colors.secondary[600]};
-  line-height: 1.6;
-`;
-
 export default function Home() {
-  const features = [
-    {
-      icon: '🎓',
-      title: 'Quality Education',
-      description: 'We provide comprehensive educational programs designed to nurture young minds and prepare them for future success.',
-    },
-    {
-      icon: '👨‍👩‍👧‍👦',
-      title: 'Parent Partnership',
-      description: 'We believe in strong partnerships with parents to ensure the best learning experience for every child.',
-    },
-    {
-      icon: '🌟',
-      title: 'Holistic Development',
-      description: 'Our curriculum focuses on academic excellence, creativity, and character development.',
-    },
-    {
-      icon: '🏫',
-      title: 'Safe Environment',
-      description: 'We maintain a secure, nurturing environment where children can learn, play, and grow with confidence.',
-    },
-  ];
-
   return (
-    <>
-      <HeroSection>
-        <Container>
-          <HeroContent>
-            <HeroTitle>Welcome to Little Champ School</HeroTitle>
-            <HeroSubtitle>
-              Nurturing young minds with love, care, and quality education. 
-              Where every child is a champion in their own way.
-            </HeroSubtitle>
-            <HeroButtons>
-              <Button size="lg" href="/curriculum">
-                Explore Our Programs
-              </Button>
-              <Button size="lg" variant="outline" href="/contact">
-                Contact Us
-              </Button>
-            </HeroButtons>
-          </HeroContent>
-        </Container>
-      </HeroSection>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-yellow-50">
+      <div className="container mx-auto px-6 py-20">
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            Welcome to Little Champ School
+          </h1>
+          <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+            Nurturing young minds with love, care, and quality education. 
+            Where every child is a champion in their own way.
+          </p>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <a 
+              href="/curriculum" 
+              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+            >
+              Explore Our Programs
+            </a>
+            <a 
+              href="/contact" 
+              className="border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
 
-      <FeaturesSection>
-        <Container>
-          <SectionTitle>Why Choose Little Champ?</SectionTitle>
-          <FeaturesGrid>
-            {features.map((feature, index) => (
-              <FeatureCard key={index} hover>
-                <FeatureIcon>{feature.icon}</FeatureIcon>
-                <FeatureTitle>{feature.title}</FeatureTitle>
-                <FeatureDescription>{feature.description}</FeatureDescription>
-              </FeatureCard>
+      <div className="bg-white py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-semibold text-gray-900 text-center mb-12">
+            Why Choose Little Champ?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: '🎓',
+                title: 'Quality Education',
+                description: 'We provide comprehensive educational programs designed to nurture young minds and prepare them for future success.',
+              },
+              {
+                icon: '👨‍👩‍👧‍👦',
+                title: 'Parent Partnership',
+                description: 'We believe in strong partnerships with parents to ensure the best learning experience for every child.',
+              },
+              {
+                icon: '🌟',
+                title: 'Holistic Development',
+                description: 'Our curriculum focuses on academic excellence, creativity, and character development.',
+              },
+              {
+                icon: '🏫',
+                title: 'Safe Environment',
+                description: 'We maintain a secure, nurturing environment where children can learn, play, and grow with confidence.',
+              },
+            ].map((feature, index) => (
+              <div key={index} className="bg-white p-8 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-lg transition-shadow">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl text-white">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
             ))}
-          </FeaturesGrid>
-        </Container>
-      </FeaturesSection>
-    </>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

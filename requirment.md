@@ -1,21 +1,22 @@
 Role: You are experienced web developer
 Goal: Build a website for school management
 Description:
-
+1. Create a Good Logo with tag line 
+2. One Banner Image on Home page
 
 Build a website for school management with following requirements:
-1. Home:
+1. Home: for homapage check the reference 
  
  
-2. About Us: Add dummy content in it will add later ( if you have the content please add into it)
+2. Who we Are : Add dummy content in it will add later ( if you have the content please add into it)
  
 3. Curriculum: pre school , nursery, junior KG and Senior KG
  
-4. Awards & Certifications:
- 
-5. Gallery:
+4. Parents Corner : Events , Blogs , Parents review, 
 
-6. Public Holidays
+5. Public Holidays
+
+6. contact Us 
 
 
 Tech stack:
@@ -26,7 +27,7 @@ Tech stack:
 
 
 Reference:
-https://indoscotsthane.com
+https://www.jumbokids.com/ and https://foundree.school/
 
 Rules:
 1. Make sure code is consistant, Modular and scalable
